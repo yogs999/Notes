@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151717"
+    tools:context=".ui.Fragment.home_Frag">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@drawable/aall_notes"
+                android:gravity="center"
+                android:text="all notes"
+                android:id="@+id/allNOtes"
+                android:layout_marginStart="10dp"
+                android:textColor="#E4410E"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:id="@+id/largeNOtes"
+                android:text="Large Notes"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:background="@drawable/aall_notes"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:id="@+id/mediumNOtes"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/aall_notes"
+                android:text="Medium Notes"
+                android:textStyle="bold"
+                android:textColor="@color/purple"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:gravity="center"
+                android:id="@+id/lowNOtes"
+                android:layout_height="50dp"
+                android:text="Low Notes"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/aall_notes"
+
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.942" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
